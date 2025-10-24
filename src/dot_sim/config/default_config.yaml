@@ -1,0 +1,50 @@
+agent_start: [0.0, 0.0]
+update_hz: 30.0
+render:
+  background_color: [0, 179, 64]
+  agent_color: [0, 255, 0]
+  alert_color: [255, 64, 64]
+  area_outline_color: [255, 0, 0]
+  drawing_region_color: [0, 255, 255]
+  waypoint_label_color: [255, 255, 255]
+  pixels_per_meter: 50.0
+  world_center_ratio: [0.5, 0.5]
+  world_width_m: null
+  world_height_m: null
+  font_name: "Comic Sans"
+  font_scale: 0.05
+  window:
+    width: null
+    height: null
+    width_ratio: 0.65
+    height_ratio: 0.65
+    min_width: 2560
+    min_height: 1440
+    resizable: true
+    fullscreen: false
+collision:
+  waypoint_radius: 0.6
+  polygon_margin: 0.1
+  debounce_sec: 1.0
+  service:
+    enabled: true
+    name: "/sim/collision_event"
+    type: "std_srvs/srv/Trigger"
+    timeout_sec: 0.5
+    payload_field: null
+named_areas:
+  - name: Base
+    points:
+      - [1.0, 1.0]
+      - [3.0, 1.0]
+      - [3.0, 3.0]
+      - [1.0, 3.0]
+    color: [255, 0, 0]
+  - name: Alpha
+    points:
+      - [5.0, 3.0]
+    color: [0, 0, 255]
+  - name: Bravo
+    points:
+      - [5.0, -1.0]
+    color: [0, 255, 0]

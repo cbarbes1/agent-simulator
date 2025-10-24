@@ -2,3 +2,4 @@ sim_msgs/
 install/
 build/
 log/
+.venv/

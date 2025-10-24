@@ -1,0 +1,5 @@
+# Request
+string region
+---
+# Response
+string status
