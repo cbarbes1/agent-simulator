@@ -29,6 +29,9 @@ setup(
     entry_points={
         'console_scripts': [
 		'dot_sim = dot_sim.dot_sim:main',
+        'ros_dot_sim = dot_sim.ros_dot_sim:main',
+        'go_to_region = dot_sim.go_to_region:main',
+        'pygame_ui = dot_sim.pygame_sim:main',
         ],
     },
 )

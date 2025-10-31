@@ -196,6 +196,7 @@ class CollisionConfig:
 @dataclass
 class SimConfig:
     agent_start: Point2D = (0.0, 0.0)
+    agents: int = 1
     named_areas: List[Dict[str, Any]] = field(default_factory=list)
     render: RenderConfig = field(default_factory=RenderConfig)
     collision: CollisionConfig = field(default_factory=CollisionConfig)
@@ -208,6 +209,7 @@ class SimConfig:
             return cfg
 
         cfg.agent_start = _as_point2d(data.get("agent_start"), cfg.agent_start)
+        cfg.agents = data.get("agents")
         areas = data.get("named_areas", cfg.named_areas)
         if isinstance(areas, list):
             cfg.named_areas = []

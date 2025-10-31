@@ -1,4 +1,5 @@
 agent_start: [0.0, 0.0]
+agents: 5
 update_hz: 30.0
 render:
   background_color: [0, 179, 64]
@@ -18,20 +19,10 @@ render:
     height: null
     width_ratio: 0.65
     height_ratio: 0.65
-    min_width: 2560
-    min_height: 1440
+    min_width: 600
+    min_height: 600
     resizable: true
     fullscreen: false
-collision:
-  waypoint_radius: 0.6
-  polygon_margin: 0.1
-  debounce_sec: 1.0
-  service:
-    enabled: true
-    name: "/sim/collision_event"
-    type: "std_srvs/srv/Trigger"
-    timeout_sec: 0.5
-    payload_field: null
 named_areas:
   - name: Base
     points:
